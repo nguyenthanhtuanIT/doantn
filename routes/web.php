@@ -120,7 +120,7 @@ Route::get('logout', "Usercontroller@getSignout");
 Route::get('auth/google', 'SocialAuthController@redirectToProvider');
 Route::get('auth/google/callback', 'SocialAuthController@handleProviderCallback');
 // layout home page
-Route::get('index.html', 'Tourcontroller@getTour');
+Route::get('/index.html', 'Tourcontroller@getTour');
 //detail pages
 Route::get('blog/{id}', 'Detailcontroller@showDetail');
 Route::post('detail/{id}', 'Commentcontroller@postComment');
@@ -146,4 +146,7 @@ Route::post('bookstour.html', 'Billcontroller@postBooks');
 //about me
 Route::get('aboutme.html', function () {
 	return view('pages.aboutme');
+});
+Route::get('/', function () {
+	return view('welcome');
 });
