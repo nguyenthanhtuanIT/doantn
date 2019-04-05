@@ -3,7 +3,7 @@ Route::get('login.html', function () {
 	return view('pages.login');
 });
 // route for page admin
-Route::group(['prefix' => 'admin', 'middleware' => 'adminmiddle'], function () {
+Route::group(['prefix' => 'admin'], function () {
 	// action table role
 	Route::group(['prefix' => 'role'], function () {
 		Route::get('list', 'Rolecontroller@getRole');
