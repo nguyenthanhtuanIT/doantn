@@ -52,7 +52,7 @@ class Usercontroller extends Controller {
 		} elseif (Auth::attempt(['username' => $req->username,
 			'password' => $req->password,
 			'role_id' => 2])) {
-			return redirect('index.html');
+			return redirect('/');
 		} else {
 			return redirect('login.html')->with('thongbao',
 				'password or username is false!');
