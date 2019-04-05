@@ -32,7 +32,7 @@
                     </div>
                     <div class="form-group">
                         <label> Full name</label>
-                        <input class="form-control" name="name" placeholder="" required />
+                        <input class="form-control" name="fullname" placeholder="" required />
                     </div>
                     <div class="form-group">
                         <label> Email</label>
@@ -47,7 +47,7 @@
                         <input class="form-control" name="phone" placeholder="" />
                     </div>
                     <button type="submit" class="btn btn-primary">Add</button>
-                    <button type="reset" class="btn btn-primary">Refresh</button> 
+                    <button type="reset" class="btn btn-primary">Refresh</button>
                     <form>
                     </div>
                 </div>
