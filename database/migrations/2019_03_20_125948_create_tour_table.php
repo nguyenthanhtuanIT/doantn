@@ -18,8 +18,8 @@ class CreateTourTable extends Migration {
 			$table->string('title');
 			$table->string('route');
 			$table->string('mean');
-			$table->dateTime('time_start');
-			$table->dateTime('time_end');
+			$table->date('time_start');
+			$table->date('time_end');
 			$table->integer('amount');
 			$table->string('status');
 			$table->string('description');

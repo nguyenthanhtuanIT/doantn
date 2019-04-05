@@ -41,14 +41,15 @@
                     <div class="form-group">
                         <label>Image</label>
                         <div>
-                            <img width="180px" height="150px" src="upload/{{$image->name}}" alt="">
+                            <img width="180px" height="150px"
+                            src="upload/{{$image->name}}" alt="">
                         </div>
                         <br>
-                        <input class="form-control" type="file" name="nameimg" 
-                        value="{{$image->name}}" />
+                        <input class="form-control" type="file"
+                        name="nameimg" value="{{$image->name}}" />
                     </div>
                     <button type="submit" class="btn btn-primary">Edit</button>
-                    <button type="reset" class="btn btn-primary">Refresh</button> 
+                    <button type="reset" class="btn btn-primary">Refresh</button>
                     <form>
                     </div>
                 </div>

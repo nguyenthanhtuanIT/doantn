@@ -16,6 +16,7 @@ class CreateCommentTable extends Migration {
 			$table->bigInteger('tour_id')->unsigned();
 			$table->bigInteger('user_id')->unsigned();
 			$table->string('content');
+			$table->Integer('KT');
 			$table->timestamps();
 		});
 	}

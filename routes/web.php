@@ -120,7 +120,7 @@ Route::get('logout', "Usercontroller@getSignout");
 Route::get('auth/google', 'SocialAuthController@redirectToProvider');
 Route::get('auth/google/callback', 'SocialAuthController@handleProviderCallback');
 // layout home page
-Route::get('/index.html', 'Tourcontroller@getTour');
+Route::get('/', 'Tourcontroller@getTour');
 //detail pages
 Route::get('blog/{id}', 'Detailcontroller@showDetail');
 Route::post('detail/{id}', 'Commentcontroller@postComment');

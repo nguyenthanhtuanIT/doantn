@@ -32,7 +32,7 @@
 			<form  style='margin-top:-150px ' class="login100-form validate-form" action="configuser/{{$cus->id}}" method="post">
 
 				<span class="login100-form-title">
-					Edit Infor User
+					Cập nhật thông tin khách hàng
 				</span>
 				@if (session('thongbao'))
 				<div class="alert alert-success">
@@ -77,7 +77,7 @@
 				</div>
 				<div class="container-login100-form-btn">
 					<button class="login100-form-btn btnlogin" type="submit">
-					Finished
+					Hoàn thành
 					</button>
 				</div>
 

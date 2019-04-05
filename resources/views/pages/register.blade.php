@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Member Login</title>
+		<title>Register page</title>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
@@ -30,7 +30,7 @@
 			<form  style='margin-top:-150px ' class="login100-form validate-form" action="register.html" method="post">
 				<input type="hidden" name="_token" value="{{csrf_token()}}" />
 				<span class="login100-form-title">
-					Member Register
+					Đăng kí thành viên
 				</span>
 				@foreach ($errors->all() as $err)
 				<div class="alert alert-danger">{{$err}}</div>
@@ -92,7 +92,7 @@
 				</div>
 				<div class="container-login100-form-btn">
 					<button class="login100-form-btn btnlogin" type="submit">
-					Register
+					Hoàn thành
 					</button>
 				</div>
 			</form>

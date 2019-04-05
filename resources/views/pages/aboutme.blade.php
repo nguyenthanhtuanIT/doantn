@@ -64,8 +64,8 @@
 									<div class="desc-t">
 										<div class="desc-tc">
 											<div class="desc">
-												<h3><span><small></small></span> Graduation thesis</h3>
-												<p>Online tour booking service</p>
+												<h3><span><small></small></span> Đề tài </h3>
+												<p>Website đặt tour du lịch trực tuyến</p>
 											</div>
 										</div>
 									</div>
@@ -78,8 +78,8 @@
 									<div class="desc-t">
 										<div class="desc-tc">
 											<div class="desc">
-												<h3><span><small></small></span>Students make</h3>
-												<p>Nguyen Thanh Tuan - 15CNTT_02</p>
+												<h3><span><small></small></span>Sinh viên thực hiện</h3>
+												<p>Nguyễn Thành Tuấn - 15CNTT_02</p>
 											</div>
 										</div>
 									</div>
@@ -92,8 +92,8 @@
 									<div class="desc-t">
 										<div class="desc-tc">
 											<div class="desc">
-												<h3><span><small></small></span> Instructor</h3>
-												<p>Ths.Pham Duong Thu Hang </p>
+												<h3><span><small></small></span> Giảng viên hướng dẫn</h3>
+												<p>Ths.Phạm Dương Thu Hằng </p>
 											</div>
 										</div>
 									</div>
@@ -106,8 +106,8 @@
 									<div class="desc-t">
 										<div class="desc-tc">
 											<div class="desc">
-												<h3><span><small></small></span> Practice unit</h3>
-												<p>Green global company</p>
+												<h3><span><small></small></span> Đơn vị thực tập</h3>
+												<p>Công ty Toàn Cầu Xanh </p>
 											</div>
 										</div>
 									</div>

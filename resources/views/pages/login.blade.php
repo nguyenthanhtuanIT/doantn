@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Member Login</title>
+		<title>Login pages</title>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" type="text/css" href="UI_login/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
@@ -32,7 +32,7 @@
 			<form class="login100-form validate-form" action="signin.html" method="post">
 				<input type="hidden" name="_token" value="{{csrf_token()}}" />
 				<span class="login100-form-title">
-					Member Login
+					Đăng nhập thành viên
 				</span>
 				<div class="wrap-input100 validate-input" data-validate = "Username is required">
 					<input class="input100" type="text" name="username" placeholder="Username">
@@ -50,14 +50,14 @@
 				</div>
 				<div class="container-login100-form-btn">
 					<button class="login100-form-btn btnlogin" type="submit">
-					Login
+					Đăng nhập
 					</button>
 				</div>
 				<div align="center" class="txt1">
 				</div>
 				<div class="text-center ">
 					<a class="txt2" href="register.html">
-						Create New Account
+						Tạo mới tài khoản
 						<i aria-hidden="true"></i>
 					</a>
 				</div>
