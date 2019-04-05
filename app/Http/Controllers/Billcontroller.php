@@ -91,8 +91,8 @@ class Billcontroller extends Controller {
 				'address' => $cus->address,
 				'tour' => $tour->id];
 			Mail::send('pages.mail', $data, function ($msg) {
-				$msg->from('doantnbookstour2015@gmail.com', 'Tuấn Nguyễn');
-				$msg->to("tuandnd241@gmail.com", 'Customer')->subject('mail confirm');
+				$msg->from('doantnbookstour2015@gmail.com', 'Website_bookstour');
+				$msg->to("tuandnd241@gmail.com", 'Admin')->subject('mail confirm');
 			});
 		}
 		return redirect('bookstour.html/' . $req->tour_id)
