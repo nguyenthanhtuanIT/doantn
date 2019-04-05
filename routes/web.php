@@ -147,6 +147,3 @@ Route::post('bookstour.html', 'Billcontroller@postBooks');
 Route::get('aboutme.html', function () {
 	return view('pages.aboutme');
 });
-Route::get('/', function () {
-	return view('welcome');
-});
