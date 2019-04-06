@@ -84,9 +84,9 @@ return [
 		    |
 	*/
 
-	'username' => env('doantnbookstour2015@gmail.com'),
+	'username' => 'doantnbookstour2015@gmail.com',
 
-	'password' => env('doantn123'),
+	'password' => 'fmrngdifoczadctv',
 
 	/*
 		    |--------------------------------------------------------------------------
