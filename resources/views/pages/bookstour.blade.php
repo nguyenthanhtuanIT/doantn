@@ -81,7 +81,7 @@
 							<input type="hidden" name="tour_id"value="{{$tour->id}}"  readonly>
 						<div>
 							<label class="label-text">Tour:</label>
-							<input class="inp-text" type="text" name="tour_id"
+							<input class="inp-text" type="text" name="tour"
 							value="{{$tour->title}}"  readonly>
 						</div>
 						@if ($tour->status == 'Còn trống')
