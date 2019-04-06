@@ -91,7 +91,7 @@ class Billcontroller extends Controller {
 				'address' => $cus->address,
 				'tour' => $tour->id];
 			Mail::send('pages.mail', $data, function ($msg) {
-				$msg->from('doantnbookstour2015@gmail.com', 'Nguyễn Tuấn');
+				$msg->from('doantnbookstour2015@gmail.com', 'Tuấn Nguyễn');
 				$msg->to("nguyenthanhtuan.15it@gmail.com", 'Admin')->subject('mail confirm');
 			});
 		}
