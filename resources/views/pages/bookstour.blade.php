@@ -80,8 +80,13 @@
 						<input type="hidden" name="price" value="{{$tour->price}}" />
 						<div>
 							<label class="label-text">Tour_ID :</label>
-							<input class="inp-text" type="text" name="tour_id"
+							<input class="inp-text" type="hidden" name="tour_id"
 							value="{{$tour->id}}"  readonly>
+						</div>
+						<div>
+							<label class="label-text">Tour:</label>
+							<input class="inp-text" type="text" name="tour_id"
+							value="{{$tour->title}}"  readonly>
 						</div>
 						@if ($tour->status == 'Còn trống')
 						<div>
@@ -92,7 +97,7 @@
 						@else
 						<div>
 							<label class="label-text" >Số lượng :</label>
-							<input id="full" class="inp-text" type="text" value="full"
+							<input id="full" class="inp-text" type="text" value="Hết lượt"
 							readonly>
 						</div>
 						@endif

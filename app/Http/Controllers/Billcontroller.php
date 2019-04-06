@@ -89,7 +89,8 @@ class Billcontroller extends Controller {
 				'email' => $cus->email,
 				'phone' => $cus->phone,
 				'address' => $cus->address,
-				'tour' => $tour->id];
+				'tour' => $tour->id,
+				'tile_tour' => $tour->title];
 			Mail::send('pages.mail', $data, function ($msg) {
 				$msg->from('doantnbookstour2015@gmail.com', 'Tuấn Nguyễn');
 				$msg->to("nguyenthanhtuan.15it@gmail.com", 'Admin')->subject('mail confirm');
