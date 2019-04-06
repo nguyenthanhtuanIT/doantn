@@ -21,8 +21,9 @@
 				<p class="first-letra mar"><strong>Số lượng: </strong>{{$t->amount}}</p>
 				<p class="first-letra mar"><strong>Trạng thái: </strong>{{$t->status}}</p>
 				<p class="first-letra mar">
-				<strong>Descript: </strong>{{$t->description}}</p>
-				<p class="first-letra mar"><strong>Giá: </strong>{{number_format($t->price)}} <i>vnđ</i></p>
+				<strong>Mô tả: </strong>{{$t->description}}</p>
+				<p class="first-letra mar"><strong>Giá: </strong>
+					{{number_format($t->price)}} <i>vnđ</i></p>
 				<div class="a">
 					@if (Auth::check())
 					<p class="btnbook"><a href="bookstour.html/{{$t->id}}" class="btn btn-primary btn-custom"
@@ -53,8 +54,8 @@
 		<h2 class="sidebar-heading">Tour nổi bật</h2>
 		@foreach ($image as $img)
 		@foreach ($tournb as $tnb)
+		@if ($tnb->id == $img->tour_id)
 		<div class="f-entry">
-			@if ($tnb->id == $img->tour_id)
 			<a href="blog/{{$tnb->id}}" class="featured-img" style="background-image: url(upload/{{$img->name}});"></a>
 			<div class="desc">
 				<h4><a href="blog/{{$tnb->id}}">
