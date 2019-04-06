@@ -68,8 +68,7 @@
 						<article class="blog-flex">
 							@foreach ($image as $img)
 							@if($lo->image_id == $img->id)
-							{{-- <a  style="background-image: url(upload/{{$img->name}});"></a> --}}
-							<img class="half blog-img" style="width: 500px;height: 180px" src="upload/{{$img->name}}" alt="">
+							<img class="half blog-img" style="width: 350px;height: 250px" src="upload/{{$img->name}}" alt="">
 							@endif
 							@endforeach
 							<div class="half">
