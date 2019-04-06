@@ -59,7 +59,7 @@
 							@foreach ($image as $img)
 							@if ($img->tour_id == $t->id)
 							<article class="blog-flex">
-								<a href="#" class="half blog-img" style="background-image: url(upload/{{$img->name}});"></a>
+								<a href="blog/{{$t->id}}" class="half blog-img" style="background-image: url(upload/{{$img->name}});"></a>
 								@endif
 								@endforeach
 								<div class="half">
@@ -67,7 +67,7 @@
 										@if (Auth::check())
 										<input type="hidden" value="{{Auth::user()->id}}" id="user_id">
 										@endif
-										<h2><a href="blog.html">{{$t->title}}</a></h2>
+										<h2><a href="blog/{{$t->id}}">{{$t->title}}</a></h2>
 										<p class="first-letra mar"><strong>Lộ trình: </strong>{{$t->route}}</p>
 										<p class="first-letra mar"><strong>Phương tiện: </strong>{{$t->mean}}</p>
 										<p class="first-letra mar"><strong>Bắt đầu: </strong>{{$t->time_start}}</p>
