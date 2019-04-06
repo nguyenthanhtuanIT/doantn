@@ -78,11 +78,7 @@
 						<input type="hidden" name="description"
 						value="{{$tour->description}}" />
 						<input type="hidden" name="price" value="{{$tour->price}}" />
-						<div>
-							<label class="label-text">Tour_ID :</label>
-							<input class="inp-text" type="hidden" name="tour_id"
-							value="{{$tour->id}}"  readonly>
-						</div>
+							<input type="hidden" name="tour_id"value="{{$tour->id}}"  readonly>
 						<div>
 							<label class="label-text">Tour:</label>
 							<input class="inp-text" type="text" name="tour_id"
