@@ -57,7 +57,7 @@ return [
 
 	'from' => [
 		'address' => env('MAIL_FROM_ADDRESS', 'doantnbookstour2015@gmail.com'),
-		'name' => env('MAIL_FROM_NAME', 'web booking'),
+		'name' => env('MAIL_FROM_NAME', 'Nguyễn Tuấn'),
 	],
 
 	/*
@@ -86,7 +86,7 @@ return [
 
 	'username' => env('doantnbookstour2015@gmail.com'),
 
-	'password' => 'doantn123',
+	'password' => env('doantn123'),
 
 	/*
 		    |--------------------------------------------------------------------------
