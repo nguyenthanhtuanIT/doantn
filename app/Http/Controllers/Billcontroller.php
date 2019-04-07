@@ -97,6 +97,6 @@ class Billcontroller extends Controller {
 			});
 		}
 		return redirect('bookstour.html/' . $req->tour_id)
-			->with('thongbao', 'successfully');
+			->with('thongbao', 'Đặt tour thành công! chúng tôi sẽ liên hệ với bạn trong thời gian sớm nhất.');
 	}
 }
