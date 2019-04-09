@@ -40,7 +40,7 @@
 	</article>
 	@endforeach
 	@else
-	<div class="alert alert-danger"><p>Không tìm thấy từ khóa liên quan</p></div>
+	<div class="alert alert-success"><p>Không tìm thấy từ khóa liên quan</p></div>
 	@endif
 	</div>
 
