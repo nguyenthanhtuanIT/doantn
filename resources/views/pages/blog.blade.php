@@ -87,7 +87,7 @@
 								@endforeach
 								<div class="comment-box">
 									<h2 class="colorlib-heading-2">
-										{{-- @if (!is_null($comment)) --}}
+
 									{{count($comment)}} Comments </h2>
 									@foreach ($comment as $com)
 									<div class="comment-post">
@@ -105,7 +105,6 @@
 										@endif
 									</div>
 									@endforeach
-									{{-- @endif --}}
 									<div class="comment-area">
 										<h2 class="colorlib-heading-2">Bình luận</h2>
 										@foreach ($detail as $d)
