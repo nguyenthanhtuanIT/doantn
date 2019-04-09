@@ -1,4 +1,5 @@
 <div class="content">
+	@if (count($dstour) > 0)
 	@foreach ($dstour as $t)
 	@foreach ($image as $img)
 	@if ($img->tour_id == $t->id)
@@ -38,7 +39,11 @@
 		</div>
 	</article>
 	@endforeach
+	@else
+	<div class="alert alert-danger"><p>Không tìm thấy từ khóa liên quan</p></div>
+	@endif
 	</div>
+
 	<div class="row">
 		<div class="col-md-12 text-center">
 			<ul class="pagination">

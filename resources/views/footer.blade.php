@@ -18,7 +18,7 @@
 				<ul class="colorlib-footer-links">
 					<li>Address: 459 Ton Duc Thang street,<br> Lien Chieu county,<br> Danang city, Vietnam </li>
 					<li>Phone: +84-236-3841323</li>
-					<li>Email: ued@ued.udn.vn</li>
+					<li>Email: ued.udn.vn</li>
 					<li>Fax: +84-236-384 2953</li>
 					<li>Website: http://ued.udn.vn</li>
 				</ul>
