@@ -87,7 +87,6 @@
 								@endforeach
 								<div class="comment-box">
 									<h2 class="colorlib-heading-2">
-
 									{{count($comment)}} Comments </h2>
 									@foreach ($comment as $com)
 									<div class="comment-post">
@@ -108,8 +107,8 @@
 									<div class="comment-area">
 										<h2 class="colorlib-heading-2">Bình luận</h2>
 										@foreach ($detail as $d)
-										<form action="detail/{{$d->tour_id}}" method="post">
-											@endforeach
+										<input type="hidden" value="{{$d->tour_id}}" id="idtour">
+										@endforeach
 											<input type="hidden" name="_token" value="{{csrf_token()}}" />
 											<div class="row form-group">
 												<div class="col-md-12">
@@ -118,12 +117,12 @@
 													<textarea name="content" id="message" cols="30" rows="10" class="form-control" placeholder="Say something about us"></textarea>
 												</div>
 												<div class="form-group">
-													<button type="submit " style="margin-top:20px;"class="btn btn-primary" >Đăng</button>
+													<button type="button" style="margin-top:20px;"class="btn btn-primary" id="post">Đăng</button>
 												</div>
 												@else
 												<div class="alert alert-danger">Đăng nhập để bình luận</div>
 												@endif
-											</form>
+
 										</div>
 									</div>
 								</div>
@@ -147,5 +146,10 @@
 					<script src="UI_asset/js/jquery.flexslider-min.js"></script>
 					<!-- Main -->
 					<script src="UI_asset/js/main.js"></script>
+					<script>
+						$('#post').click(function(){
+							alert('hiihhh');
+						});
+					</script>
 				</body>
 				</html>
