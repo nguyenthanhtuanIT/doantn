@@ -31,9 +31,9 @@ class Commentcontroller extends Controller {
 	}
 	public function deleteComment($id) {
 		$com = new Comment;
-		$comment = $com->del($id);
+		$com->del($id);
 		return redirect('admin/comment/list')->with('thongbao',
-			"Deleted comment have id = $comment->id");
+			"Deleted comment ");
 	}
 	public function postComment($id, $iduser, $content) {
 		$com = new Comment;
