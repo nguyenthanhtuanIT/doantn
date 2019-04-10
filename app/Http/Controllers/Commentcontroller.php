@@ -42,12 +42,8 @@ class Commentcontroller extends Controller {
 		return view('pages.commentajax', compact('comment'));
 	}
 	public function delComment($id) {
-		$com = new Comment;
-		$comment = $com->getCommentbyId($id);
-		$com->del($id);
-		foreach ($comment as $c) {
-			return redirect('blog/' . $c->tour_id);
-		}
-
+		$com = new Comment::find($id);
+		$comment->delete();
+		return redirect('blog/' . $comment->tour_id);
 	}
 }
