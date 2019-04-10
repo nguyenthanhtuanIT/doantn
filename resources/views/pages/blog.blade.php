@@ -156,11 +156,11 @@
 							var id = $('#idtour').val();
 							var iduser = $('#userid').val();
 							var content = $.trim($("#message").val());
-							alert(content);
-							// $.get('detail/' + id + '/' + iduser + '/' + content,
-							// 	function(data){
-							// 	alert(data);
-							// });
+							//alert(content);
+							$.get('detail/' + id + '/' + iduser + '/' + content,
+								function(data){
+								alert(data);
+							});
 						});
 					</script>
 				</body>
