@@ -39,7 +39,7 @@ class Comment extends Model {
 	}
 	public function postcomment($req, $id, $iduser) {
 		$this->tour_id = $id;
-		$this->user_id = $id_user;
+		$this->user_id = $iduser;
 		$this->content = $req->content;
 		$this->KT = 1;
 		$this->save();

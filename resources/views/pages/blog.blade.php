@@ -94,7 +94,8 @@
 										<div class="desc" id="comment-content">
 											<p>{{$com->content}}</p>
 										</div>
-										@if (Auth::check() && $com->user_id == Auth::user()->id)
+										@if (Auth::check() &&
+										$com->user_id == Auth::user()->id)
 										<form action="delcomment/{{$com->id}}"
 											method="post">
 											<input type="hidden" name="_token"
@@ -113,7 +114,8 @@
 											<div class="row form-group">
 												<div class="col-md-12">
 													@if (Auth::check())
-													<input type="hidden" value="{{Auth::user()->id}}" id="userid">
+													<input type="hidden"
+													value="{{Auth::user()->id}}" id="userid">
 													<textarea name="content" id="message" cols="30" rows="10" class="form-control" placeholder="Say something about us"></textarea>
 												</div>
 												<div class="form-group">
@@ -150,7 +152,7 @@
 						$('#post').click(function(){
 							var id = $('#idtour').val();
 							var iduser = $('#userid').val();
-							alert(userid);
+							alert(iduser);
 							// $.get('detail/' + id + '/' + iduser, function(data){
 							// 	alert(data);
 							// });
