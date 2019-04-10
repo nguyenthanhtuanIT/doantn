@@ -148,12 +148,12 @@
 					<script src="UI_asset/js/main.js"></script>
 					<script>
 						$('#post').click(function(){
-							var idtour = $('#idtour').val();
+							var id = $('#idtour').val();
 							var iduser = $('#userid').val();
-							//alert(idtour);
-							$.get('detail/' + idtour + '/' + iduser, function(data){
-								alert(data);
-							});
+							alert(userid);
+							// $.get('detail/' + id + '/' + iduser, function(data){
+							// 	alert(data);
+							// });
 						});
 					</script>
 				</body>
