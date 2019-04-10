@@ -35,10 +35,10 @@ class Commentcontroller extends Controller {
 		return redirect('admin/comment/list')->with('thongbao',
 			"Deleted comment have id = $comment->id");
 	}
-	public function postComment(Request $req, $id, $iduser) {
+	public function postComment($id, $iduser, $content) {
 		$com = new Comment;
 		$comment = Comment::where('tour_id', $id)->get();
-		$com->postComment($req, $id, $iduser);
+		$com->postComment($id, $iduser, $content);
 		return view('pages.commentajax', compact('comment'));
 	}
 	public function delComment($id) {

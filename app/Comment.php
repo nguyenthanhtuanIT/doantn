@@ -37,10 +37,10 @@ class Comment extends Model {
 		$com = $this->getCommentbyId($id);
 		$com->delete();
 	}
-	public function postcomment($req, $id, $iduser) {
+	public function postcomment($id, $iduser, $content) {
 		$this->tour_id = $id;
 		$this->user_id = $iduser;
-		$this->content = $req->content;
+		$this->content = $content;
 		$this->KT = 1;
 		$this->save();
 	}

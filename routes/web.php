@@ -123,7 +123,7 @@ Route::get('auth/google/callback', 'SocialAuthController@handleProviderCallback'
 Route::get('/', 'Tourcontroller@getTour');
 //detail pages
 Route::get('blog/{id}', 'Detailcontroller@showDetail');
-Route::get('detail/{id}/{iduser}', 'Commentcontroller@postComment');
+Route::get('detail/{id}/{iduser}/{content}', 'Commentcontroller@postComment');
 // Route::get('comment/{id}/{kt}', 'Commentcontroller@ajaxComment');
 // edit comment
 Route::post('delcomment/{id}', 'Commentcontroller@delComment');

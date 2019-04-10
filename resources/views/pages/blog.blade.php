@@ -116,7 +116,7 @@
 													@if (Auth::check())
 													<input type="hidden"
 													value="{{Auth::user()->id}}" id="userid">
-													<textarea name="content" id="message" cols="30" rows="10" class="form-control" placeholder="Say something about us"></textarea>
+													<textarea name="content" id="message" cols="30" rows="10" class="form-control" placeholder="Say something about us" id="cont"></textarea>
 												</div>
 												<div class="form-group">
 													<button type="button" style="margin-top:20px;"class="btn btn-primary" id="post">Đăng</button>
@@ -152,8 +152,10 @@
 						$('#post').click(function(){
 							var id = $('#idtour').val();
 							var iduser = $('#userid').val();
+							var content = $('#cont').text();
 							//alert(iduser);
-							$.get('detail/' + id + '/' + iduser, function(data){
+							$.get('detail/' + id + '/' + iduser + '/' + content,
+								function(data){
 								alert(data);
 							});
 						});
