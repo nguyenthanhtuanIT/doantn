@@ -1,4 +1,4 @@
-	{{-- @foreach ($comment as $com)
+	@foreach ($comment as $com)
 	<div class="comment-post">
 		<div class="user" style="background-image: url(upload/avtc.png);"></div>
 		<div class="desc" id="comment-content">
@@ -13,5 +13,5 @@
 		</form>
 		@endif
 	</div>
-	@endforeach --}}
-	<h1>hhhhhh</h1>
+	@endforeach
+	{{-- <h1>hhhhhh</h1> --}}
