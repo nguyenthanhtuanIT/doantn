@@ -110,13 +110,14 @@
 										@foreach ($detail as $d)
 										<input type="hidden" value="{{$d->tour_id}}" id="idtour">
 										@endforeach
+										<form action="" >
 											<input type="hidden" name="_token" value="{{csrf_token()}}" />
 											<div class="row form-group">
 												<div class="col-md-12">
 													@if (Auth::check())
 													<input type="hidden"
 													value="{{Auth::user()->id}}" id="userid">
-													<textarea name="content" id="message" cols="30" rows="10" class="form-control" placeholder="Say something about us">ưdwdw</textarea>
+													<textarea name="content" id="message" cols="30" rows="10" class="form-control" placeholder="Say something about us"></textarea>
 												</div>
 												<div class="form-group">
 													<button type="button" style="margin-top:20px;"class="btn btn-primary" id="post">Đăng</button>
@@ -126,6 +127,7 @@
 												@endif
 
 										</div>
+									</form>
 									</div>
 								</div>
 							</div>
@@ -149,11 +151,11 @@
 					<!-- Main -->
 					<script src="UI_asset/js/main.js"></script>
 					<script>
-						var content = $('#message').text();
+
 						$('#post').click(function(){
 							var id = $('#idtour').val();
 							var iduser = $('#userid').val();
-
+							var content = $('#message').text();
 							alert(content);
 							// $.get('detail/' + id + '/' + iduser + '/' + content,
 							// 	function(data){
