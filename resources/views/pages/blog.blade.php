@@ -88,6 +88,7 @@
 								<div class="comment-box">
 									<h2 class="colorlib-heading-2">
 									{{count($comment)}} Comments </h2>
+									<div id="a-comment">
 									@foreach ($comment as $com)
 									<div class="comment-post">
 										<div class="user" style="background-image: url(upload/avtc.png);"></div>
@@ -105,6 +106,7 @@
 										@endif
 									</div>
 									@endforeach
+									</div>
 									<div class="comment-area">
 										<h2 class="colorlib-heading-2">Bình luận</h2>
 										@foreach ($detail as $d)
@@ -159,7 +161,7 @@
 							//alert(content);
 							$.get('detail/' + id + '/' + iduser + '/' + content,
 								function(data){
-								alert(data);
+								$('#a-comment').html(data);
 							});
 						});
 					</script>
