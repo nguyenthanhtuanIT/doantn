@@ -113,8 +113,7 @@
 											<div class="row form-group">
 												<div class="col-md-12">
 													@if (Auth::check())
-													$userid = Auth::user()->id;
-													<input type="hidden" name="user_id" value="{{$userid}}" id="userid">
+													<input type="hidden" value="{{Auth::user()->id}}" id="userid">
 													<textarea name="content" id="message" cols="30" rows="10" class="form-control" placeholder="Say something about us"></textarea>
 												</div>
 												<div class="form-group">
