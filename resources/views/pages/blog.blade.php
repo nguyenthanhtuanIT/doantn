@@ -152,7 +152,7 @@
 						$('#post').click(function(){
 							var id = $('#idtour').val();
 							var iduser = $('#userid').val();
-							var content = $('#message').text();
+							var content = $('#message').html();
 							alert(content);
 							// $.get('detail/' + id + '/' + iduser + '/' + content,
 							// 	function(data){
