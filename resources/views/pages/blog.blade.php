@@ -116,7 +116,7 @@
 													@if (Auth::check())
 													<input type="hidden"
 													value="{{Auth::user()->id}}" id="userid">
-													<textarea name="content" id="message" cols="30" rows="10" class="form-control" placeholder="Say something about us"></textarea>
+													<textarea name="content" id="message" cols="30" rows="10" class="form-control" placeholder="Say something about us">ưdwdw</textarea>
 												</div>
 												<div class="form-group">
 													<button type="button" style="margin-top:20px;"class="btn btn-primary" id="post">Đăng</button>
