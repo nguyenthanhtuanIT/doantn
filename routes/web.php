@@ -124,7 +124,7 @@ Route::get('/', 'Tourcontroller@getTour');
 //detail pages
 Route::get('blog/{id}', 'Detailcontroller@showDetail');
 Route::post('detail/{id}', 'Commentcontroller@postComment');
-Route::get('comment/{id}/{kt}', 'Commentcontroller@ajaxComment');
+// Route::get('comment/{id}/{kt}', 'Commentcontroller@ajaxComment');
 // edit comment
 Route::post('delcomment/{id}', 'Commentcontroller@delComment');
 //register

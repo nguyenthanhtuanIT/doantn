@@ -113,7 +113,7 @@
 											<div class="row form-group">
 												<div class="col-md-12">
 													@if (Auth::check())
-													<input type="hidden" name="user_id" value="{{Auth::user()->id}}">
+													<input type="hidden" name="user_id" value="{{Auth::user()->id}}" id="userid">
 													<textarea name="content" id="message" cols="30" rows="10" class="form-control" placeholder="Say something about us"></textarea>
 												</div>
 												<div class="form-group">
@@ -148,7 +148,11 @@
 					<script src="UI_asset/js/main.js"></script>
 					<script>
 						$('#post').click(function(){
-							alert('hiihhh');
+							var idtour = $('#idtour').val();
+							var iduser = $('#userid').val();
+							$.get('detail/' + id_tour + '/' + iduser, function(data){
+								alert(data);
+							});
 						});
 					</script>
 				</body>
