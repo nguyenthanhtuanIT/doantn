@@ -86,26 +86,26 @@
 								</article>
 								@endforeach
 								<div class="comment-box">
-									<h2 class="colorlib-heading-2">
-									{{count($comment)}} Comments </h2>
 									<div id="a-comment">
-									@foreach ($comment as $com)
-									<div class="comment-post">
-										<div class="user" style="background-image: url(upload/avtc.png);"></div>
-										<div class="desc" id="comment-content">
-											<p>{{$com->content}}</p>
+										<h2 class="colorlib-heading-2">
+										{{count($comment)}} Comments </h2>
+										@foreach ($comment as $com)
+										<div class="comment-post">
+											<div class="user" style="background-image: url(upload/avtc.png);"></div>
+											<div class="desc" id="comment-content">
+												<p>{{$com->content}}</p>
+											</div>
+											@if (Auth::check() &&
+											$com->user_id == Auth::user()->id)
+											<form action="delcomment/{{$com->id}}"
+												method="post">
+												<input type="hidden" name="_token"
+												value="{{csrf_token()}}">
+												<button type="submit" class='edit_comment' id="del">Del</button>
+											</form>
+											@endif
 										</div>
-										@if (Auth::check() &&
-										$com->user_id == Auth::user()->id)
-										<form action="delcomment/{{$com->id}}"
-											method="post">
-											<input type="hidden" name="_token"
-											value="{{csrf_token()}}">
-											<button type="submit" class='edit_comment' id="del">Del</button>
-										</form>
-										@endif
-									</div>
-									@endforeach
+										@endforeach
 									</div>
 									<div class="comment-area">
 										<h2 class="colorlib-heading-2">Bình luận</h2>
@@ -128,8 +128,8 @@
 												<div class="alert alert-danger">Đăng nhập để bình luận</div>
 												@endif
 
-										</div>
-									</form>
+											</div>
+										</form>
 									</div>
 								</div>
 							</div>
@@ -161,8 +161,8 @@
 							//alert(content);
 							$.get('detail/' + id + '/' + iduser + '/' + content,
 								function(data){
-								$('#a-comment').html(data);
-							});
+									$('#a-comment').html(data);
+								});
 						});
 					</script>
 				</body>

@@ -1,3 +1,5 @@
+	<h2 class="colorlib-heading-2">
+	{{count($comment)}} Comments </h2>
 	@foreach ($comment as $com)
 	<div class="comment-post">
 		<div class="user" style="background-image: url(upload/avtc.png);"></div>
