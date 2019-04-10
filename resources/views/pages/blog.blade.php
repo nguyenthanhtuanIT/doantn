@@ -155,7 +155,7 @@
 						$('#message').blur(function(){
 							var id = $('#idtour').val();
 							var iduser = $('#userid').val();
-							var content = $('#message').text();
+							var content = $.trim($("#message").val());
 							alert(content);
 							// $.get('detail/' + id + '/' + iduser + '/' + content,
 							// 	function(data){
