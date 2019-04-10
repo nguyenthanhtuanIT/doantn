@@ -150,10 +150,10 @@
 						$('#post').click(function(){
 							var idtour = $('#idtour').val();
 							var iduser = $('#userid').val();
-							alert(idtour);
-							// $.get('detail/' + id_tour + '/' + iduser, function(data){
-							// 	alert(data);
-							// });
+							//alert(idtour);
+							$.get('detail/' + id_tour + '/' + iduser, function(data){
+								alert(data);
+							});
 						});
 					</script>
 				</body>
