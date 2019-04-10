@@ -37,8 +37,8 @@ class Commentcontroller extends Controller {
 	}
 	public function postComment($id, $iduser, $content) {
 		$com = new Comment;
-		$comment = Comment::where('tour_id', $id)->get();
 		$com->postComment($id, $iduser, $content);
+		$comment = Comment::where('tour_id', $id)->get();
 		return view('pages.commentajax', compact('comment'));
 	}
 	public function delComment($id) {
