@@ -152,7 +152,7 @@
 					<script src="UI_asset/js/main.js"></script>
 					<script>
 
-						$('#post').click(function(){
+						$('#message').blur(function(){
 							var id = $('#idtour').val();
 							var iduser = $('#userid').val();
 							var content = $('#message').text();
