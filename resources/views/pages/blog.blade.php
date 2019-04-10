@@ -153,11 +153,11 @@
 							var id = $('#idtour').val();
 							var iduser = $('#userid').val();
 							var content = $('#message').text();
-							//alert(content);
-							$.get('detail/' + id + '/' + iduser + '/' + content,
-								function(data){
-								alert(data);
-							});
+							alert(content);
+							// $.get('detail/' + id + '/' + iduser + '/' + content,
+							// 	function(data){
+							// 	alert(data);
+							// });
 						});
 					</script>
 				</body>
