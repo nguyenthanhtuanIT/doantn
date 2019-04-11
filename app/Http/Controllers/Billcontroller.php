@@ -37,7 +37,7 @@ class Billcontroller extends Controller {
 	}
 	public function deleteBill($id) {
 		$bil = new Bill;
-		$bill->del($id);
+		$bil->del($id);
 		return redirect('admin/bill/list')->with('thongbao',
 			"Deleted bill have id = $bill->id");
 	}
