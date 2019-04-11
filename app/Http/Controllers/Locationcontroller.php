@@ -8,42 +8,35 @@ use Illuminate\Http\Request;
 
 class Locationcontroller extends Controller {
 	public function getLocation() {
-		$location = Location::paginate(10);
+		$loc = new Location;
+		$location = $loc->show();
 		return view('admin.location.danhsach', ['location' => $location]);
 	}
 	public function getAddlocation() {
 		return view('admin.location.them');
 	}
-	public function postAddlocation(Request $res) {
+	public function postAddlocation(Request $req) {
 		$location = new Location;
-		$location->image_id = $res->image_id;
-		$location->code = $res->code;
-		$location->name = $res->name;
-		$location->address = $res->address;
-		$location->description = $res->description;
-		$location->save();
+		$location->add($req);
 		return redirect('admin/location/add')->with('thongbao', 'successfully');
 	}
 	public function getUpdatelocation($id) {
-		$location = Location::find($id);
+		$loc = new Location;
+		$location = $loc->getbyId($id);
 		return view('admin.location.sua', ['location' => $location]);
 	}
-	public function postUpdatelocation(Request $res, $id) {
-		$location = Location::find($id);
-		$location->image_id = $res->image_id;
-		$location->code = $res->code;
-		$location->name = $res->name;
-		$location->address = $res->address;
-		$location->description = $res->description;
-		$location->save();
+	public function postUpdatelocation(Request $req, $id) {
+		$loc = new Location;
+		$lct = $loc->getbyId($id);
+		$lct->add($req);
 		return redirect('admin/location/update/' . $id)
 			->with('thongbao', 'successfully');
 	}
 	public function deleteLocation($id) {
-		$location = Location::find($id);
-		$location->delete();
+		$location = new Location;
+		$location->del($id);
 		return redirect('admin/location/list')->with('thongbao',
-			"Deleted location have id = $location->id");
+			"Deleted location");
 	}
 	//home location
 	public function showLocation() {
