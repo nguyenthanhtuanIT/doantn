@@ -61,7 +61,6 @@ class Billcontroller extends Controller {
 		} else {
 			$tour->amount = 0;
 		}
-
 		$tour->company_id = $req->company_id;
 		$tour->tag_id = $req->tag_id;
 		$tour->title = $req->title;
