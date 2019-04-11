@@ -45,9 +45,7 @@ class Commentcontroller extends Controller {
 		$com = new Comment;
 		$com->del($id);
 		$comment = $com->getCommentbyId($id);
-		foreach ($comment as $com) {
-			return redirect('blog/' . $com->tour_id);
-		}
+		return redirect('blog/' . $comment->tour_id);
 
 	}
 }
