@@ -39,7 +39,7 @@ class Billcontroller extends Controller {
 		$bil = new Bill;
 		$bil->del($id);
 		return redirect('admin/bill/list')->with('thongbao',
-			"Deleted bill have id = $bill->id");
+			"Deleted bill");
 	}
 	public function Books($id) {
 		$tour = Tour::find($id);
