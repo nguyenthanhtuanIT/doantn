@@ -28,7 +28,7 @@
                     <input type="hidden" name="_token" value="{{csrf_token()}}" />
                     <div class="form-group">
                         <label> User_id </label>
-                        <input class="form-control" name="user_id" placeholder="" readonly value="{{$bill->customer_id}}" />
+                        <input class="form-control" name="user_id" placeholder="" readonly value="{{$bill->user_id}}" />
                     </div>
                     <div class="form-group">
                         <label> Tour_id</label>
@@ -47,7 +47,7 @@
                         <input class="form-control" name="totalprice" placeholder="" value="{{$bill->totalprice}}" />
                     </div>
                     <button type="submit" class="btn btn-primary">Edit</button>
-                    <button type="reset" class="btn btn-primary">Refresh</button> 
+                    <button type="reset" class="btn btn-primary">Refresh</button>
                     <form>
                     </div>
                 </div>
