@@ -18,8 +18,8 @@ class Detail extends Model {
 		return $this->find($id);
 	}
 	public function add($req) {
-		$this->tour_id = $res->tour_id;
-		$this->detail = $res->detail;
+		$this->tour_id = $req->tour_id;
+		$this->detail = $req->detail;
 		$this->save();
 	}
 	public function del($id) {
