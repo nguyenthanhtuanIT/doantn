@@ -12,7 +12,7 @@ class Bill extends Model {
 		return $this->belongsTo('App\Tour', 'tour_id', 'id');
 	}
 	public function show() {
-		return $this->pagination(5);
+		return $this->paginate(5);
 	}
 	public function add($req) {
 		$this->user_id = $req->user_id;
@@ -24,5 +24,9 @@ class Bill extends Model {
 	}
 	public function getbillbyId($id) {
 		return $this->find($id);
+	}
+	public function del($id) {
+		$bill = $this->getbillbyId($id);
+		$bill->delete();
 	}
 }
