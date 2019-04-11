@@ -9,41 +9,35 @@ use Illuminate\Http\Request;
 use Mail;
 
 class Billcontroller extends Controller {
+
 	public function getBill() {
-		$bill = Bill::paginate(5);
+		$bil = new Bill;
+		$bill = $bil->show();
 		return view('admin.bill.danhsach', ['bill' => $bill]);
 	}
 	public function getAddbill() {
 		return view('admin.bill.them');
 	}
 	public function postAddbill(Request $req) {
-		$bill = new Bill;
-		$bill->user_id = $req->user_id;
-		$bill->tour_id = $req->tour_id;
-		$bill->amount = $req->amount;
-		$bill->price = $req->price;
-		$bill->totalprice = $req->totalprice;
-		$bill->save();
+		$bil = new Bill;
+		$bil->add($req);
 		return redirect('admin/bill/add')->with('thongbao', 'successfully');
 	}
 	public function getUpdatebill($id) {
-		$bill = Bill::find($id);
+		$bil = new Bill;
+		$bill = $bil->getbillbyId($id);
 		return view('admin.bill.sua', ['bill' => $bill]);
 	}
 	public function postUpdatebill(Request $req, $id) {
-		$bill = Bill::find($id);
-		$bill->user_id = $req->user_id;
-		$bill->tour_id = $req->tour_id;
-		$bill->amount = $req->amount;
-		$bill->price = $req->price;
-		$bill->totalprice = $req->totalprice;
-		$bill->save();
+		$bil = new Bill;
+		$bill = $bil->getbillbyId($id);
+		$bill->add($req);
 		return redirect('admin/bill/update/' . $id)->with('thongbao',
 			'successfully');
 	}
 	public function deleteBill($id) {
-		$bill = Bill::find($id);
-		$bill->delete();
+		$bil = new Bill;
+		$bill->del($id);
 		return redirect('admin/bill/list')->with('thongbao',
 			"Deleted bill have id = $bill->id");
 	}
