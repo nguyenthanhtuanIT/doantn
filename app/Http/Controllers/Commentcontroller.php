@@ -44,8 +44,8 @@ class Commentcontroller extends Controller {
 	public function delComment($id) {
 		$com = new Comment;
 		$com->del($id);
-		$comment = $com->getCommentbyId($id);
-		return redirect('blog/' . $comment->tour_id);
+		//$comment = $com->getCommentbyId($id);
+		return redirect()->back();
 
 	}
 }
