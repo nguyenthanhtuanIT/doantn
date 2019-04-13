@@ -20,53 +20,34 @@ class Tourcontroller extends Controller {
 		]);
 	}
 	public function getTouradmin() {
-		$tour = Tour::paginate(10);
+		$t = new Tour;
+		$tour = $t->show();
 		return view('admin.tour.danhsach', ['tour' => $tour]);
 	}
 	public function getAddtour() {
 		return view('admin.tour.them');
 	}
-	public function postAddtour(Request $res) {
+	public function postAddtour(Request $req) {
 		$tour = new Tour;
-		$tour->company_id = $res->company_id;
-		$tour->tag_id = $res->tag_id;
-		$tour->title = $res->title;
-		$tour->route = $res->route;
-		$tour->mean = $res->mean;
-		$tour->time_start = $res->time_start;
-		$tour->time_end = $res->time_end;
-		$tour->amount = $res->amount;
-		$tour->status = $res->status;
-		$tour->description = $res->description;
-		$tour->price = $res->price;
-		$tour->save();
+		$tour->add($req);
 		return redirect('admin/tour/add')->with('thongbao', 'successfully');
 	}
 	public function getUpdatetour($id) {
-		$tour = Tour::find($id);
+		$t = new Tour;
+		$tour = $t->getbyId($id);
 		return view('admin.tour.sua', ['tour' => $tour]);
 	}
-	public function postUpdatetour(Request $res, $id) {
-		$tour = Tour::find($id);
-		$tour->company_id = $res->company_id;
-		$tour->tag_id = $res->tag_id;
-		$tour->title = $res->title;
-		$tour->route = $res->route;
-		$tour->mean = $res->mean;
-		$tour->time_start = $res->time_start;
-		$tour->time_end = $res->time_end;
-		$tour->amount = $res->amount;
-		$tour->status = $res->status;
-		$tour->description = $res->description;
-		$tour->price = $res->price;
-		$tour->save();
+	public function postUpdatetour(Request $req, $id) {
+		$t = new Tour;
+		$tour = $t->getbyId($id);
+		$tour->add($req);
 		return redirect('admin/tour/update/' . $id)->with('thongbao', 'successfully');
 	}
 	public function deleteTour($id) {
-		$tour = Tour::find($id);
-		$tour->delete();
+		$tour = new Tour;
+		$tour->del($id);
 		return redirect('admin/tour/list')->with('thongbao',
-			"Deleted tour have id = $tour->id");
+			"Deleted tour");
 	}
 	public function Search(Request $req, $key) {
 

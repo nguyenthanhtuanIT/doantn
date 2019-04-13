@@ -10,7 +10,8 @@ use Illuminate\Support\Facades\Auth;
 
 class Usercontroller extends Controller {
 	public function getUser() {
-		$user = Users::paginate(5);
+		$us = new Users;
+		$user = $us->show();
 		return view('admin.user.danhsach', ['user' => $user]);
 	}
 	public function getAdduser() {
@@ -18,28 +19,24 @@ class Usercontroller extends Controller {
 	}
 	public function postAdduser(Request $req) {
 		$user = new Users;
-		$user->role_id = $req->role_id;
-		$user->username = $req->username;
-		$user->password = bcrypt($req->password);
-		$user->save();
+		$user->add($req);
 		return redirect('admin/user/add')->with('thongbao', 'successfully');
 	}
 	public function getUpdateuser($id) {
-		$user = Users::find($id);
+		$us = new Users;
+		$user = $us->getbyId($id);
 		return view('admin.user.sua', ['user' => $user]);
 	}
 	public function postUpdateuser(Request $req, $id) {
-		$user = Users::find($id);
-		$user->role_id = $req->role_id;
-		$user->username = $req->username;
-		$user->password = bcrypt($req->password);
-		$user->save();
+		$us = new Users;
+		$user = $us->getbyId($id);
+		$user->add($req);
 		return redirect('admin/user/update/' . $id)->with('thongbao', 'successfully');
 	}
 	public function deleteUser($id) {
-		$user = Users::find($id);
-		$user->delete();
-		return redirect('admin/user/list')->with('thongbao', "Deleted $user->username");
+		$user = new Users;
+		$user->del($id);
+		return redirect('admin/user/list')->with('thongbao', "Deleted ");
 	}
 	public function getSignin() {
 		return view('pages.login');
